@@ -1,6 +1,5 @@
 # I have just copied the initial skeleton code from Part 1 of the course
 # We can user this as a base to start turning it object oriented and multi-player
-# test comment to see how commit works
 
 import random
 
