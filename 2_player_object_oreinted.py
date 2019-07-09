@@ -54,13 +54,13 @@ class Board():
         (self.bo[9] == self.le and self.bo[6] == self.le and self.bo[3] == self.le) or # down the right side
         (self.bo[7] == self.le and self.bo[5] == self.le and self.bo[3] == self.le) or # diagonal
         (self.bo[9] == self.le and self.bo[5] == self.le and self.bo[1] == self.le)) # diagonal
-     def getBoardCopy(self, board):
-        self.board = board
-        # Make a duplicate of the board list and return it the duplicate.
-        dupeBoard = []
+     #def getBoardCopy(self, board):
+     #   self.board = board
+     #   # Make a duplicate of the board list and return it the duplicate.
+     #   dupeBoard = []
 
-        for i in self.board:
-            dupeBoard.append(i)
+     #   for i in self.board:
+     #       dupeBoard.append(i)
 
         return dupeBoard
      def isSpaceFree(self, board, move):
