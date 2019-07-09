@@ -141,7 +141,7 @@ while True:
                 gameIsPlaying = False
             else:
                 if board.isBoardFull(theBoard):
-                    drawBoard(theBoard)
+                    board.drawBoard(theBoard)
                     print('The game is a tie!')
                     break
                 else:
