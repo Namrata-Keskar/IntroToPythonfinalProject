@@ -124,7 +124,7 @@ while True:
     # Reset the board
     theBoard = [' '] * 10
     player1Letter, player2Letter = board.inputPlayerLetter()
-    turn = 'player 1' #board.whoGoesFirst()
+    turn = board.whoGoesFirst()
     print('The ' + turn + ' will go first.')
     gameIsPlaying = True
 
