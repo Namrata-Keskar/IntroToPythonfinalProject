@@ -62,7 +62,7 @@ class Board():
      #   for i in self.board:
      #       dupeBoard.append(i)
 
-        return dupeBoard
+        # return dupeBoard
      def isSpaceFree(self, board, move):
         self.board = board
         self.move = move
