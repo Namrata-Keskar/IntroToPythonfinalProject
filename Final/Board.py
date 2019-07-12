@@ -13,15 +13,16 @@ class Board():
             ans = ans.upper()
             if ans.startswith('Y'):
                 print()
-                print('Tic Tac Toe is a 2 player game in which the players take turns marking a 3x3 grid. One player will choose to mark their spaces with the letter /"X/" and the other player will use the letter /"O/". The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.')
+                print('Tic Tac Toe is a 2 player game in which the players take turns marking a 3x3 grid. One player will choose to mark their spaces with the letter \"X\" and the other player will use the letter \"O\". The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. The player who goes first is randomly chosen by the computer.')
+                print()
                 return ''
             elif ans.startswith('N'):
+                print()
                 return ''
 
     def drawBoard(self):
         # This function prints out the board that it was passed.
         # "board" is a list of 10 strings representing the board (ignore index 0)
-        
         print('   |   |')
         print(' ' + self.board[1] + ' | ' + self.board[2] + ' | ' + self.board[3])
         print('   |   |')
@@ -37,11 +38,6 @@ class Board():
     def whoGoesFirst(self):
         # Randomly choose the player who goes first.
         return random.randint(0, 1) 
-
-    def playAgain(self):
-        # This function returns True if the player wants to play again, otherwise it returns False.
-        print('Do you want to play again? (yes or no)')
-        #return input().lower().startswith('y')
 
     def isWinner(self, le):
         self.le = le
@@ -77,3 +73,17 @@ class Board():
             if self.isSpaceFree(i):
                 return False
         return True
+
+    def playAgain(self):
+        # This function returns True if the player wants to play again, otherwise it returns False.
+        ans = ''
+        while (ans.startswith('Y') != True) or (ans.startswith('N') != True):
+            print('Do you want to play again?  Please type Y for yes or N for no.')
+            ans = input()
+            ans = ans.upper()
+            if ans.startswith('Y'):
+                self.board = [' '] * 10
+                return True 
+            elif ans.startswith('N'):
+                return False
+        

@@ -11,13 +11,15 @@ class Player():
         self.board = bo
         
     def assignPlayerName(self):
-        print()
-        print('What name would you like for your player?')
+        print('What name would you like for player ' + str(self.playerNumber) + '?')
         self.name = input()
+        print()
 
     def chooseLetter(self):
+        self.letter = ' '
         # Lets the player type which letter they want to be.
         # Returns a the player's choice
+        print(self.name + ' has been chosen to go first.')
         while not (self.letter == 'X' or self.letter == 'O'):
             print('Does ' + self.name + ' want to be X or O?')
             self.letter = input().upper()
