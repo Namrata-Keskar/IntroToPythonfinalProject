@@ -2,6 +2,7 @@ import random
 import os
 import sys
 
+
 class Board():
     board = [' '] * 10
 
