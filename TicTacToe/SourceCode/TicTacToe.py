@@ -45,9 +45,8 @@ class TicTacToe():
             while gameIsPlaying:
                 # current players makes the move
                 currentPlayer.makeMove()
-y
 
-                #draw the board
+                # draw the board
                 os.system('cls')
                 self.board.drawBoard()
 
