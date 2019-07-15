@@ -2,11 +2,14 @@ import random
 import os
 import sys
 
+# This is a class that draws the board and also includes other functions related to the board.
 
 class Board():
     board = [' '] * 10
 
     def showIntro(self):
+        # This function asks the player if they want to see the instructions. If they type yes, then the
+        # instructions are displayed, if they type no, then the game continues.
         ans = 'no ans'
         while (ans.startswith('Y') != True) or (ans.startswith('N') != True):
             print('Do you want to see the instructions? Please type Y for yes or N for no.')
@@ -52,19 +55,9 @@ class Board():
         (self.board[9] == self.le and self.board[6] == self.le and self.board[3] == self.le) or # down the right side
         (self.board[7] == self.le and self.board[5] == self.le and self.board[3] == self.le) or # diagonal
         (self.board[9] == self.le and self.board[5] == self.le and self.board[1] == self.le)) # diagonal
-     #def getBoardCopy(self, board):
-     #   self.board = board
-     #   # Make a duplicate of the board list and return it the duplicate.
-     #   dupeBoard = []
 
-     #   for i in self.board:
-     #       dupeBoard.append(i)
-
-        # return dupeBoard
     def isSpaceFree(self, move):
         self.move = move
-        #self.getPlayer1Move(self)
-        #self.getPlayer2Move(self)
         # Return true if the passed move is free on the passed board.
         return self.board[self.move] == ' '
 
