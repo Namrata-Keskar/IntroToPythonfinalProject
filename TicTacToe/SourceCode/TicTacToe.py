@@ -23,7 +23,7 @@ class TicTacToe():
 
                 firstPlayer = self.player1
                 secondPlayer = self.player2
-                firstPlayerNumber = board.whoGoesFirst()
+                firstPlayerNumber = self.board.whoGoesFirst()
                 if(firstPlayerNumber == 1):
                     firstPlayer = self.player2
                     secondPlayer = self.player1
@@ -45,6 +45,7 @@ class TicTacToe():
             while gameIsPlaying:
                 # current players makes the move
                 currentPlayer.makeMove()
+y
 
                 #draw the board
                 os.system('cls')
@@ -74,7 +75,7 @@ class TicTacToe():
                     gameSetUp = True
                     gameIsPlaying = True
                     continue
-                elif answer == False:y
+                elif answer == False:
                     sys.exit()
 
 
