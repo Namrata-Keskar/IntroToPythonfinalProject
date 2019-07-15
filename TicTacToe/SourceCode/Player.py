@@ -1,5 +1,7 @@
 from Board import Board
 
+# This class is a Player class that includes all the functions related to a player.
+
 class Player():
     name = 'NoName'
     letter = ''
@@ -7,10 +9,13 @@ class Player():
     board = 0
 
     def __init__(self, playerNumber, bo):
+        # Initiaizes the player number and gives the player access to the board.
         self.playerNumber = playerNumber
         self.board = bo
         
     def assignPlayerName(self):
+        # This function allows the players to set a character name for their player.
+        # the player is address wiht this name throughout the game.
         print('What name would you like for player ' + str(self.playerNumber) + '?')
         self.name = input()
         print()
@@ -27,6 +32,7 @@ class Player():
         return self.letter
 
     def makeMove(self):
+        # This function asks the player what move they want to make and checks if is a valid move.
         move = ' '
         while (move not in '1 2 3 4 5 6 7 8 9'.split()) or (not self.board.isSpaceFree(int(move))):
             print(self.name + ', what is your move? (1-9)')
