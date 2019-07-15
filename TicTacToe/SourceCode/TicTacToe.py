@@ -3,8 +3,10 @@ from Board import Board
 import os
 import sys
 
+# This class is a TicTacToe class that contains the Play function that runs the actual game.
 
 class TicTacToe():
+    # One board object and two player objects are created for the game.
     board = Board()
     player1 = Player(1, board)
     player2 = Player(2, board)
@@ -13,7 +15,9 @@ class TicTacToe():
         gameSetUp = True
 
         while True:
-
+            # This while loop runs when the game need to display the introduction of game.
+            # This includes the instructions, choosing player names, randomly assigning a player to go first
+            # and allowing the first player to choose their letter.
             while gameSetUp:
                 print('Welcome to Tic Tac Toe!')
                 self.board.showIntro()
@@ -43,6 +47,9 @@ class TicTacToe():
                 gameIsPlaying = True
 
             while gameIsPlaying:
+                # This while loop runs when the actual game is being played and when the players are making
+                # their moves.
+
                 # current players makes the move
                 currentPlayer.makeMove()
 
@@ -67,6 +74,8 @@ class TicTacToe():
                 else:
                     currentPlayer = firstPlayer
 
+            # This while loop is called when the game is over.
+            # It allows the player to play again or exits the program.
             while gameIsPlaying == False:
                 answer = self.board.playAgain()
                 if answer == True:
@@ -78,6 +87,7 @@ class TicTacToe():
                     sys.exit()
 
 
+# A object of the TicTacToe class is created, and they Play function of that object is called.
 game = TicTacToe()
 game.Play()
 
